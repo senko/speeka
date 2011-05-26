@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+html, table, input {
+    font: 14px/21px Arial, Helvetica, sans-serif;
+}
+
+html {
+    color: #747474;
+    background: white;
+}
+
+#page {
+    width: 800px;
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    color: #06f;
+}
+
+#logo {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -9999;
+    width: 221px;
+    line-height: 100px;
+    height: 100px;
+    margin: 1em auto;
+    background: url(../img/logo-en.gif);
+}
+
+p.intro {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    // color: #0095D9;
+    // text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+input.button {
+    color: #fff;
+    cursor: pointer;
+
+    padding: 2px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 2px 2px rgba(0,0,0,.5);
+    -o-box-shadow: 0 2px 2px rgba(0,0,0,.5);
+    box-shadow: 0 2px 2px rgba(0,0,0,.5);
+}
+
+input.button:active {
+    position: relative;
+    bottom: -1px;
+    -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,.5), 0 2px 0 rgba(255,255,255,.5);
+    -moz-box-shadow: inset 0 2px 2px rgba(0,0,0,.5), 0 2px 0 rgba(255,255,255,.5);
+    -o-box-shadow: inset 0 2px 2px rgba(0,0,0,.5), 0 2px 0 rgba(255,255,255,.5);
+    box-shadow: inset 0 2px 2px rgba(0,0,0,.5), 0 2px 0 rgba(255,255,255,.5);
+}
+
+input.text {
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+#create-chatroom-btn {
+    font: 18px/24px Arial, Helvetica, sans-serif;
+    padding: 0.5em 1em 0.5em 1em;
+
+    background: #06f;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#06f), to(#00f));
+    background-image: -moz-linear-gradient(#06f, #00f);
+}
+
+#create-chatroom-btn:hover {
+    background: #00f;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#09f), to(#00f));
+    background-image: -moz-linear-gradient(#09f, #00f);
+
+}
+
+p.centered {
+    text-align: center;
+}
+
+#intro {
+    margin-bottom: 5em;
+}
+
+#chatroom {
+    width: 800px;
+    margin: 2em auto;
+}
+
+#output {
+    width: 791px;
+    height: 400px;
+    border: 1px solid #06f;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 4px;
+}
+
+#input {
+    margin-top: 4px;
+}
+
+#change-nick-btn {
+    background: #777;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#777));
+    background-image: -moz-linear-gradient(#aaa, #777);
+    width: 120px;
+}
+
+#change-nick-btn:hover {
+    background: #777;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ccc), to(#777));
+    background-image: -moz-linear-gradient(#ccc, #777);
+}
+
+#nickname-input {
+    width: 120px;
+    display: none;
+}
+
+#nick-change-done-btn {
+    display: none;
+    background: #777;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#777));
+    background-image: -moz-linear-gradient(#aaa, #777);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#nick-change-done-btn:hover {
+    background: #777;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ccc), to(#777));
+    background-image: -moz-linear-gradient(#ccc, #777);
+}
+
+#chat-input {
+    width: 620px;
+    border: 1px solid #ddd;
+}
+
+#send-message-btn {
+    float: right;
+    background: #777;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#777));
+    background-image: -moz-linear-gradient(#aaa, #777);
+    width: 50px;
+}
+
+#send-message-btn:hover {
+    background: #777;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ccc), to(#777));
+    background-image: -moz-linear-gradient(#ccc, #777);
+}
+
+p.system-notice {
+    font-style: italic;
+    color: #06f;
+}
+
+p.own-message {
+    color: #3a3;
+}
+
+
+
+#footer {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-style: italic;
+}
+
+a {
+    color: #06f;
+}
+
+#dialog {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#nick-change-dialog {
+    width: 300px;
+    height: 150px;
+    margin: 10em auto;
+    background: white;
+    opacity: 1;
+    border: 2px solid #06f;
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 10px;
+}

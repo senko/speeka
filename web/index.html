@@ -1,0 +1,56 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Speeka - Instant, anyonymous chatrooms</title>
+  <meta name="description" content="Open source instant, anonymous chatrooms">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script src="http://speeka.net:7070/nowjs/now.js"></script>
+  <script src="http://scripts.embed.ly/jquery.embedly.min.js"></script>
+  <script type="text/javascript" src="js/speeka.js"></script>
+</head>
+
+<body>
+
+<a href="http://github.com/senko/speeka"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
+
+  <div id="page">
+    <a href="http://speeka.net/" id="logo">Speeka</a>
+
+    <div id="intro">
+      <h1>Create instant, anonymous chatrooms</h1>
+
+      <p class="centered">
+        <img alt="loading" src="img/loader.gif" id="loader-spinner" />
+        <input style="display:none;" class="button" type="submit" name="create" value="Create chatroom"
+          id="create-chatroom-btn"/>
+      </p>
+    </div>
+
+    <div id="chatroom" style="display: none;">
+      <div id="output">
+      </div>
+      <div id="people">
+      </div>
+      <div id="input">
+        <input class="button" type="button" value="Change nickname" id="change-nick-btn" />
+        <input class="text" type="text" value="" id="nickname-input" />
+        <input class="button" type="button" value="Done" id="nick-change-done-btn" />
+        <input class="text" type="text" value="" id="chat-input" />
+        <input class="button" type="button" value="Send" id="send-message-btn" />
+      </div>
+    </div>
+
+    <div id="footer">
+      By <a target="_blank" href="http://senko.net/en/">Senko Rašić</a> |
+      <a target="_blank" href="http://awwapp.com/">Web Whiteboard</a> |
+      <a target="_blank" href="http://en.co.de/">Encode</a> |
+      <a target="_blank" href="http://sparrw.com/">Sparrw</a>
+    </div>
+  </div>
+
+</body>
+</html>
