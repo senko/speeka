@@ -5,7 +5,8 @@ and is ideal for having quick conversations between people who aren't
 neccessarily on the same social or IM network.
 
 Speeka is written in node.js using now.js framework. The client side
-is built using jQuery.
+is built using jQuery. Embedly is used for automatically embedding links
+posted in the chatroom.
 
 ### Requirements
 
