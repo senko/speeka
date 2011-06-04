@@ -6,8 +6,18 @@ $(function(){
     $('#nickname-input').val(nickname);
     $('#chat-input').val('');
 
+    function intercept_unload(e) {
+        var txt = 'Leave the chatroom?';
+        var e = e || window.event;
+        if (e) {
+            e.returnValue = txt;
+        }
+        return txt;
+    }
+
     function room_join_cb(success) {
         if (success) {
+            window.onbeforeunload = intercept_unload;
             $('#chatroom').fadeIn('fast', function() {
                 $('#chat-input').focus();
             });
