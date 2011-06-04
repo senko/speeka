@@ -54,7 +54,8 @@ $(function(){
     })
 
     $('#nick-change-done-btn').click(function() {
-        nickname = $.trim($('#nickname-input').val());
+        nickname = $.trim($('#nickname-input').val()).substring(0, 40);
+        $('#nickname-input').val(nickname);
 
         if (nickname)
             $('#change-nick-btn').val(nickname);
