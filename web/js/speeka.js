@@ -202,7 +202,7 @@ $(function(){
             text += ' and you.';
             text = $('<div/>').text(text).html();
         } else {
-            text = '** Hello there. You just created a new anonymous chat. ' +
+            text = '*** Hello there. You just created a new anonymous chat. ' +
                 'To invite people here, give them the <a href="' + window.location.href +
                 '" onclick="javascript:return false;">URL to this page</a>. ' +
                 'This chat will exist as long as at least one person is here.';
