@@ -2,9 +2,22 @@ $(function(){
 
     var nickname = '';
     var room_id = null;
+    var visible = true;
+    var unread_count = 0;
+    var document_title = document.title || 'Speeka';
 
     $('#nickname-input').val(nickname);
     $('#chat-input').val('');
+
+    $(window).focus(function() {
+        visible = true;
+        unread_count = 0;
+        document.title = document_title;
+    });
+
+    $(window).blur(function() {
+        visible = false;
+    });
 
     function intercept_unload(e) {
         var txt = 'Leave the chatroom?';
@@ -106,6 +119,11 @@ $(function(){
         var h = $('#output')[0].scrollHeight;
         if (!h) h = $('#output').height();
         $('#output').scrollTop(h);
+
+        if (!visible) {
+            unread_count++;
+            document.title = '(' + unread_count + ') ' + document_title;
+        }
     }
 
     function outputMessage(clientId, who, msg) {
