@@ -6,6 +6,13 @@ $(function(){
     var unread_count = 0;
     var document_title = document.title || 'Speeka';
 
+    if (localStorage && localStorage.nickname) {
+        nickname = localStorage.nickname;
+
+        if (nickname)
+            $('#change-nick-btn').val(nickname);
+    }
+
     $('#nickname-input').val(nickname);
     $('#chat-input').val('');
 
@@ -83,6 +90,8 @@ $(function(){
         $('#chat-input').focus();
 
         now.changeNickname(room_id, nickname);
+        if (localStorage)
+            localStorage.nickname = nickname;
     });
 
     $('#nickname-input').keypress(function (e) {
