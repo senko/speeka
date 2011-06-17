@@ -133,6 +133,7 @@ everyone.on('disconnect', function() {
         } else{
             delete chatrooms[room_id];
             console.log('Deleted empty room ' + room_id);
+            console.log('Rooms remaining: ' + Object.keys(chatrooms).length);
         }
     }
 });
