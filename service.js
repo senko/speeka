@@ -9,7 +9,7 @@ var
 var webroot = path.join(path.dirname(__filename), 'web');
 
 server = http.createServer(function (req, res) {
-    paperboy .deliver(webroot, req, res);
+    paperboy.deliver(webroot, req, res);
 });
 
 var everyone = nowjs.initialize(server);
@@ -66,7 +66,7 @@ everyone.now.createRoom = function(cb) {
 everyone.now.joinRoom = function(room_id, nick, cb) {
     var r = chatrooms[room_id];
     if (!r) {
-        console.log("Client " + this.user.clientId + " tried to open unexistent room " + room_id);
+        console.log("Client " + this.user.clientId + " tried to open non-existent room " + room_id);
         cb(false);
         return;
     }
