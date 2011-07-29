@@ -50,7 +50,14 @@ function backlog_replay(client, room) {
 }
 
 everyone.now.createRoom = function(cb) {
-    var room_id = Buffer(uuid.generate('binary')).toString('base64').slice(0, 10);
+    var room_id;
+
+    while (!room_id) {
+        room_id = Buffer(uuid.generate('binary')).toString('base64').slice(0, 4);
+        if (chatrooms.hasOwnProperty(room_id))
+            room_id = undefined;
+    }
+
     var group = nowjs.getGroup(room_id);
 
     chatrooms[room_id] = {
